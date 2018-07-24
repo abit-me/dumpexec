@@ -11,6 +11,16 @@
 
 void zip(NSString *respath, NSString *despath)
 {
+    NSFileManager *fileMgr = [NSFileManager defaultManager];
+    
+    if ([fileMgr fileExistsAtPath:despath]) {
+        NSError *err = nil;
+        [fileMgr removeItemAtPath:despath error:&err];
+        if (err) {
+            printf("[ERRO] zip rm file error: %s\n", err.description.UTF8String);
+        }
+    }
+    
     ZZArchive* newArchive = [[ZZArchive alloc] initWithURL:[NSURL fileURLWithPath:despath]
                                                    options:@{ZZOpenOptionsCreateIfMissingKey : @YES}
                                                      error:nil];
@@ -41,7 +51,7 @@ void zip(NSString *respath, NSString *despath)
     NSError *err = nil;
     [newArchive updateEntries:entries error:&err];
     if (err) {
-        printf("updateEntries err: %s\n", err.description.UTF8String);
+        printf("[ERRO] updateEntries err: %s\n", err.description.UTF8String);
     }
 }
 

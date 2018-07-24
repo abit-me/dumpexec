@@ -48,7 +48,6 @@ do
               -fobjc-arc \
               ${IOS_VERSION_MIN_FLAG}=${IOS_VERSION_MIN} \
               $IOS_FRAMEWORKS \
-              -lz -lsqlite3 \
               -current_version 1.0.0 \
               -compatibility_version 1.0.0 \
               ${INPUT} \

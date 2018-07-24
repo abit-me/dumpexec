@@ -48,7 +48,6 @@ do
               -fobjc-arc \
               ${IOS_VERSION_MIN_FLAG}=${IOS_VERSION_MIN} \
               $IOS_FRAMEWORKS \
-              -lz -lsqlite3 \
               -lZipZap \
               ${INPUT} \
               -o ${DIR}/${BIN_NAME}
