@@ -82,6 +82,10 @@ NSArray *installedAppsInfos()
                               @"bundlePath" : [proxy bundleContainerURL], @"dataPath" : [proxy dataContainerURL]};
         [arr addObject:dic];
     }
-    
+    [arr sortUsingComparator:^NSComparisonResult(NSDictionary * obj1, NSDictionary * obj2) {
+        NSString *appName1 = [obj1 valueForKey:@"appName"];
+        NSString *appName2 = [obj2 valueForKey:@"appName"];
+        return [appName1 compare:appName2];
+    }];
     return arr;
 }
