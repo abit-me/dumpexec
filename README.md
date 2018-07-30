@@ -1,7 +1,10 @@
 # dumpexec
 
-1. ./build_deb.sh
-2. scp dumpexec.deb root@192.168.x.x:/var/root
-3. ssh root@192.168.x.x
-4. dpkg -i dumpexec.deb
-5. dumpexec
+> (Mac) ./build_deb.sh
+> (Mac) scp dumpexec.deb root@192.168.x.x:/var/root
+> (Mac) ssh root@192.168.x.x
+> (iDev) dpkg -i dumpexec.deb
+> (iDev) dumpexec
+> (iDev) choose one app to decrypt
+> (iDev) the result ipa is in the /var/root/Documents/Decrypt/YouAppBundleID/YouAppExeName.ipa
+> (Mac) scp root@192.168.x.x:/var/root/Documents/Decrypt/YouAppBundleID/YouAppExeName.ipa .
