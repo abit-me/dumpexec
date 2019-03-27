@@ -13,7 +13,6 @@ IOS_FRAMEWORKS="-framework Foundation"
 BIN_NAME="dumpdecrypted.dylib"
 IOS_VERSION_MIN=7.0
 
-# DEVELOPER_DIR="$(xcode-select --path)"
 DEVELOPER_DIR="/Applications/Xcode.app/Contents/Developer"
 SDK_ROOT_OS=$DEVELOPER_DIR/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk
 SDK_ROOT_SIMULATOR=$DEVELOPER_DIR/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk
