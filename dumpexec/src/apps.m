@@ -79,7 +79,7 @@ NSArray *installedAppsInfos()
     for (LSApplicationProxy *proxy in installedAppsProxy())
     {
         NSDictionary *dic = @{@"bundleID" : [proxy applicationIdentifier], @"appName" : [proxy localizedName],
-                              @"bundlePath" : [proxy bundleContainerURL], @"dataPath" : [proxy dataContainerURL]};
+                              @"bundlePath" : [[proxy bundleContainerURL] path], @"dataPath" : [[proxy dataContainerURL] path]};
         [arr addObject:dic];
     }
     [arr sortUsingComparator:^NSComparisonResult(NSDictionary * obj1, NSDictionary * obj2) {

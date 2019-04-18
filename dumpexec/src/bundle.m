@@ -20,9 +20,6 @@ NSString *choosenAppBundlePath()
     {
         NSDictionary *app = installedApp[i];
         printf("%d:\t%s\t\n", i, [[app valueForKey:@"appName"] UTF8String]);
-        // printf("bundleID:   %s\n", [[app valueForKey:@"bundleID"] UTF8String]);
-        // printf("bundlePath: %s\n", [[[app valueForKey:@"bundlePath"] absoluteString] UTF8String]);
-        // printf("dataPath:   %s\n", [[[app valueForKey:@"dataPath"] absoluteString] UTF8String]);
     }
     
     printf("\n");
@@ -34,9 +31,8 @@ NSString *choosenAppBundlePath()
         printf("[ERRO] wrong choice number \n");
         return nil;
     } else {
-        NSURL *bundlePath = [installedApp[choose] valueForKey:@"bundlePath"];
-        NSString *bPath = [bundlePath resourceSpecifier];
-        return bPath;
+        NSString *bundlePath = [installedApp[choose] valueForKey:@"bundlePath"];
+        return bundlePath;
     }
     return nil;
 }

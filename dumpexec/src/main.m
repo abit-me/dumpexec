@@ -45,7 +45,6 @@ int main(int argc, char * argv[], char ** envp)
         printf("[ERRO] Path is nil\n");
         return 3;
     }
-    
     NSDictionary *infoPlist = infoPlistDictOfBundlePath(path);
     NSString *exeName = [infoPlist valueForKey:@"CFBundleExecutable"];
     NSString *appPath = appPathOfBundlePath(path);

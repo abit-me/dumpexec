@@ -1,7 +1,7 @@
 Package: dumpexec
 Name: dumpexec
 Depends: 
-Version: 0.0.1
+Version: 0.0.2
 Architecture: iphoneos-arm
 Description: dump encrypted iOS app(include Frameworks)
 Maintainer: abit
